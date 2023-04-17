@@ -80,6 +80,16 @@
   padding: 4rem 0;
 }
 
+.center h1{
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  text-align: center;
+  z-index: 2;
+}
+
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
