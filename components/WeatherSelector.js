@@ -187,6 +187,7 @@ const options = [
       },
     ],
   },
+
 ];
 
 export default function WeatherSelector({ onWeatherChange, onCityChange }) {

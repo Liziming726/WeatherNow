@@ -17,7 +17,7 @@ export default function Home() {
   const [city, setCity] = useState("济南");
   const [weather, setWeather] = useState({});
   //空气质量
-  const [air, setAir] = useState({});
+  const [air, setAir] = useState("济南");
 
   //发送axios请求,主页天气数据
   useEffect(() => {
@@ -31,14 +31,14 @@ export default function Home() {
       });
     axios
       .get(
-        "https://api.seniverse.com/v3/air/now.json?key=SIKgGG7jSVrpD4Zb4&location=jinan&language=zh-Hans&scope=city"
+        `https://api.seniverse.com/v3/air/now.json?key=SIKgGG7jSVrpD4Zb4&location=${city}&language=zh-Hans&scope=city`
       )
       .then((res) => {
         //将获取数据渲染
         console.log(res.data.results[0].air.city);
         setAir(res.data.results[0].air.city);
       });
-  }, []);
+  }, [city]);
 
   function handleWeatherChange(newWeather, newCity) {
     setWeather(newWeather);
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <Air/>
+          <Air city={city}/>
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}

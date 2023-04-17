@@ -34,8 +34,18 @@
   border-radius: var(--border-radius);
 }
 
+.description title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  text-align: center;
+  z-index: 2;
+}
+
 .code {
-  font-weight: 700;
+  font-weight: 900;
   font-family: var(--font-mono);
 }
 
@@ -116,6 +126,14 @@
 
 .logo {
   position: relative;
+}
+.dev{
+  color: #fff500;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff500;
+  animation: none;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
