@@ -25,9 +25,8 @@ export default function Air() {
           "https://api.seniverse.com/v3/life/suggestion.json?key=SjPJO8uWbDNjYyU4i&location=jinan&language=zh-Hans&days=1"
         )
         .then((res) => {
-          // setComfort(res.data.results[0].suggestion);
-          console.log(res.data.results[0].suggestion);
-          
+          setComfort(res.data.results[0].suggestion[0].comfort);
+          console.log(res.data.results[0].suggestion[0].comfort);
         });
    }, []);
   return (
@@ -41,8 +40,8 @@ export default function Air() {
           空气 <span>-&gt;</span>
         </h2>
         <p className={inter.className}>
-          {air.quality} Aqi-{air.aqi} {"~"} 
-          {/* {comfort} */}
+          {air.quality} Aqi-{air.aqi} {" "}
+          {comfort.brief}
         </p>
       </a>
     </div>

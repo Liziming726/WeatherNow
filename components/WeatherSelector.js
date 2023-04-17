@@ -204,7 +204,10 @@ export default function WeatherSelector({ onWeatherChange, onCityChange }) {
         //将获取数据渲染
         setWeather(res.data.results[0].now);
         setCity(res.data.results[0].location.name);
-        onWeatherChange(res.data.results[0].now, res.data.results[0].location.name);
+        onWeatherChange(
+          res.data.results[0].now,
+          res.data.results[0].location.name
+        );
       });
   }
   return (

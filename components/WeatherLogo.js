@@ -7,7 +7,6 @@ const weatherSvg = {
   sunny: (
     <svg
       t="1681697878734"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +30,6 @@ const weatherSvg = {
   cloudy: (
     <svg
       t="1681698608719"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +53,6 @@ const weatherSvg = {
   rain: (
     <svg
       t="1681698576244"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +81,6 @@ const weatherSvg = {
   duocloudy: (
     <svg
       t="1681698824171"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +114,6 @@ const weatherSvg = {
   hail: (
     <svg
       t="1681699267354"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +147,6 @@ const weatherSvg = {
   thunderstorm: (
     <svg
       t="1681699290188"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +185,6 @@ const weatherSvg = {
   heavyrain: (
     <svg
       t="1681699305545"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +213,6 @@ const weatherSvg = {
   middlerain: (
     <svg
       t="1681699333448"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +241,6 @@ const weatherSvg = {
   rainstorm: (
     <svg
       t="1681699356037"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +269,6 @@ const weatherSvg = {
   sandstorm: (
     <svg
       t="1681699375514"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +332,6 @@ const weatherSvg = {
   snow: (
     <svg
       t="1681699789272"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -396,7 +385,6 @@ const weatherSvg = {
   middlesnow: (
     <svg
       t="1681699942506"
-      class="icon"
       viewBox="0 0 1024 1024"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
