@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Cd from "@/components/Cd";
 import AirSelector from "@/components/AirSelector";
 import axios from "axios";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function AirPage() {
@@ -56,7 +57,9 @@ export default function AirPage() {
         </div>
 
         <div className={styles.center}>
-          <h1 className={styles.title}>Breath in {city}!</h1>
+          <h1 className={styles.title}>Breath in {" "}
+          { city ? city + "!" : "😉?" }
+          </h1>
         </div>
         <div className={styles.grid}>
           <div className={styles.card}>
@@ -110,6 +113,8 @@ export default function AirPage() {
         </div>
 
         <Cd />
+      <Footer/>
+
       </main>
     </>
   );

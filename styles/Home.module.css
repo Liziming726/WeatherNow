@@ -55,6 +55,27 @@
   width: var(--max-width);
   max-width: 100%;
 }
+.newgrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(33%, auto));
+  width: var(--max-width);
+  max-width: 100%;
+}
+.newcard{
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+.newcard p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 30ch;
+}
 
 .card {
   padding: 1rem 1.2rem;
@@ -141,14 +162,24 @@
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
+  .newcard:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
 
   .card:hover span {
+    transform: translateX(4px);
+  }
+  .newcard:hover span {
     transform: translateX(4px);
   }
 }
 
 @media (prefers-reduced-motion) {
   .card:hover span {
+    transform: none;
+  }
+  .newcard:hover span {
     transform: none;
   }
 }
@@ -165,8 +196,17 @@
     max-width: 320px;
     text-align: center;
   }
+  .newgrid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
 
   .card {
+    padding: 1rem 2.5rem;
+  }
+  .newcard {
     padding: 1rem 2.5rem;
   }
 
@@ -233,6 +273,9 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .newgrid {
     grid-template-columns: repeat(2, 50%);
   }
 }

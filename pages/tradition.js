@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Cd from "@/components/Cd";
 import axios from "axios";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Tradition() {
@@ -52,7 +53,7 @@ export default function Tradition() {
               {solar_term}
             </Tag>
           ) : (
-            <Tag color="gray" key={solar_term}>
+            <Tag color="green" key={solar_term}>
               {solar_term}
             </Tag>
           )}
@@ -74,7 +75,7 @@ export default function Tradition() {
         .then((res) => {
           setDataa(res.data.results.chinese_calendar);
         });
-    }, 1000);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
@@ -100,6 +101,7 @@ export default function Tradition() {
         </div>
 
         <Cd />
+        <Footer/>
       </main>
     </>
   );

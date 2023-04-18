@@ -22,7 +22,7 @@ const Footer = () => {
           Ziming Li 
         </a>
       </p>
-      <a href="https://www.seniverse.com/" rel="noreferrer" target="_blank">
+      <a style={{ fontFamily: "KaiTi" }} href="https://www.seniverse.com/" rel="noreferrer" target="_blank">
         Powered by Next.js & seniverse
       </a>
     </div>

@@ -11,6 +11,7 @@ import WeatherSelector from "@/components/WeatherSelector";
 import WeatherLogo from "@/components/WeatherLogo";
 import Air from "@/components/Air";
 import Trad from "@/components/Trad";
+import Four from "@/components/Four";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -76,7 +77,7 @@ export default function Home() {
           <Trad />
 
           <a
-            href=""
+            href="https://www.weathernow.fun"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -84,22 +85,12 @@ export default function Home() {
             <h2 className={inter.className}>
               彩赤 <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>日出而华灯初上，日落而花好月圆</p>
-          </a>
-
-          <a
-            href=""
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              预报 <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              天气阴晴不定&nbsp; 保持好心情 &nbsp;天天开心!
+            <p className={inter.className}>日出而华灯初上，日落而花好月圆
+            先别点我，开发中😜...
             </p>
           </a>
+
+          <Four city={city}/>
         </div>
         <Footer />
       </main>
