@@ -1,6 +1,6 @@
 ## Welcome Weather Now / Know🙌
 
-## 你的天气小助手，请你进来呼吸！
+## 浪漫大自然，去呼吸吧！
 
 [Weather Now!](https://www.weathernow.fun/)
 
