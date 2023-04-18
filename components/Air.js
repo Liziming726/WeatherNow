@@ -27,7 +27,7 @@ export default function Air({ city }) {
       )
       .then((res) => {
         setComfort(res.data.results[0].suggestion[0].comfort);
-        console.log(res.data.results[0].suggestion[0].comfort);
+        // console.log(res.data.results[0].suggestion[0].comfort);
       });
   }, []);
   return (

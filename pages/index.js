@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import WeatherSelector from "@/components/WeatherSelector";
 import WeatherLogo from "@/components/WeatherLogo";
 import Air from "@/components/Air";
-
+import Trad from "@/components/Trad";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://api.seniverse.com/v3/weather/now.json?key=SjPJO8uWbDNjYyU4i&location=jinan&language=zh-Hans&unit=c"
+        `https://api.seniverse.com/v3/weather/now.json?key=SjPJO8uWbDNjYyU4i&location=${city}&language=zh-Hans&unit=c`
       )
       .then((res) => {
         //将获取数据渲染
@@ -35,7 +35,6 @@ export default function Home() {
       )
       .then((res) => {
         //将获取数据渲染
-        console.log(res.data.results[0].air.city);
         setAir(res.data.results[0].air.city);
       });
   }, [city]);
@@ -73,37 +72,23 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <Air city={city}/>
+          <Air city={city} />
+          <Trad />
+
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href=""
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              气候 <span>-&gt;</span>
+              彩赤 <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
+            <p className={inter.className}>日出而华灯初上，日落而花好月圆</p>
           </a>
 
           <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              环境 <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href=""
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -112,8 +97,7 @@ export default function Home() {
               预报 <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
+              天气阴晴不定&nbsp; 保持好心情 &nbsp;天天开心!
             </p>
           </a>
         </div>
