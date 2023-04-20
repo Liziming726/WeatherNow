@@ -180,8 +180,20 @@ export default function Realtimeforecast() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Forecast&nbsp;
-            <code className={styles.code}>When to Run!</code>
+            Forecast &nbsp;
+            <code className={styles.code}>
+              When to Run
+              {(qix && qix.includes("雨")) ||
+              (qix1 && qix1.includes("雨")) ||
+              (qix2 && qix2.includes("雨")) ||
+              (qix3 && qix3.includes("雨")) ||
+              (qix4 && qix4.includes("雨")) ||
+              (qix5 && qix5.includes("雨")) ||
+              (qix6 && qix6.includes("雨")) ||
+              (qix7 && qix7.includes("雨"))
+                ? " 需要带伞!"
+                : "!"}
+            </code>
           </p>
           <div>
             <Realtimeselect onWeatherChange={handleWeatherChange} />
@@ -195,7 +207,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time}</h3>
             <p>
-              {tem ? "气温: " + tem + "°C" : "明"}
+              {tem ? "气温: " + tem + "°C" : ""}
               <br />
               {qix}
             </p>
@@ -203,7 +215,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time1}</h3>
             <p>
-              {tem1 ? "气温: " + tem1 + "°C" : "天"}
+              {tem1 ? "气温: " + tem1 + "°C" : ""}
               <br />
               {qix1}
             </p>
@@ -211,7 +223,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time2}</h3>
             <p>
-              {tem2 ? "气温: " + tem2 + "°C" : "出"}
+              {tem2 ? "气温: " + tem2 + "°C" : ""}
               <br />
               {qix2}
             </p>
@@ -219,7 +231,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time3}</h3>
             <p>
-              {tem3 ? "气温: " + tem3 + "°C" : "门"}
+              {tem3 ? "气温: " + tem3 + "°C" : ""}
               <br />
               {qix3}
             </p>
@@ -227,7 +239,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time4}</h3>
             <p>
-              {tem4 ? "气温: " + tem4 + "°C" : "带"}
+              {tem4 ? "气温: " + tem4 + "°C" : ""}
               <br />
               {qix4}
             </p>
@@ -235,7 +247,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time5}</h3>
             <p>
-              {tem5 ? "气温: " + tem5 + "°C" : "伞"}
+              {tem5 ? "气温: " + tem5 + "°C" : ""}
               <br />
               {qix5}
             </p>
@@ -243,7 +255,7 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time6}</h3>
             <p>
-              {tem6 ? "气温: " + tem6 + "°C" : "吗？"}
+              {tem6 ? "气温: " + tem6 + "°C" : ""}
               <br />
               {qix6}
             </p>
@@ -251,8 +263,9 @@ export default function Realtimeforecast() {
           <div className={styles.card}>
             <h3>{time7}</h3>
             <p>
-              {tem7 ? "气温: " + tem7 + "°C" : "🌂"}
+              {tem7 ? "气温: " + tem7 + "°C" : ""}
               <br />
+              {qix7}
             </p>
           </div>
         </div>
