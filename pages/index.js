@@ -7,11 +7,11 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 //引入组件
 import Footer from "@/components/Footer";
-import WeatherSelector from "@/components/WeatherSelector";
-import WeatherLogo from "@/components/WeatherLogo";
-import Air from "@/components/Air";
-import Trad from "@/components/Trad";
-import Four from "@/components/Four";
+import WeatherSelector from "@/components/Weather/WeatherSelector";
+import WeatherLogo from "@/components/Weather/WeatherLogo";
+import Air from "@/components/Air/Air";
+import Trad from "@/components/Tradition/Trad";
+import Four from "@/components/Forecast/Four";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -77,16 +77,16 @@ export default function Home() {
           <Trad />
 
           <a
-            href="https://www.weathernow.fun"
+            href="/"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              彩赤 <span>-&gt;</span>
+              日月 <span>-&gt;</span>
             </h2>
             <p className={inter.className}>日出而华灯初上，日落而花好月圆
-            先别点我，开发中😜...
+            别点我，开发中😜...
             </p>
           </a>
 

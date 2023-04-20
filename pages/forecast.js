@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 import Cd from "@/components/Cd";
 import Footer from "@/components/Footer";
 import axios from "axios";
-import FourSelector from "@/components/FourSelector";
+import FourSelector from "@/components/Forecast/FourSelector";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Forcast() {
@@ -119,3 +119,4 @@ export default function Forcast() {
     </>
   );
 }
+

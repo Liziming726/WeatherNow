@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Cd from "@/components/Cd";
-import AirSelector from "@/components/AirSelector";
+import AirSelector from "@/components/Air/AirSelector";
 import axios from "axios";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
@@ -99,7 +99,7 @@ export default function AirPage() {
             </p>
           </div>
           <div className={styles.card}>
-            <h2 className={inter.className}>防晒:{uv.brief}</h2>
+            <h2 className={inter.className}>紫外线:{uv.brief}</h2>
             <p className={inter.className}>
               <code className={styles.code}>{uv.details}</code>
             </p>
